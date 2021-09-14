@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhaochaolan.github.io</id>
     <title>Eden的博客</title>
-    <updated>2021-09-14T02:57:46.693Z</updated>
+    <updated>2021-09-14T03:26:52.170Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhaochaolan.github.io"/>
     <link rel="self" href="https://zhaochaolan.github.io/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://zhaochaolan.github.io/images/avatar.png</logo>
     <icon>https://zhaochaolan.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Eden的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[前端基础之BOM]]></title>
+        <id>https://zhaochaolan.github.io/qian-duan-ji-chu-zhi-bom/</id>
+        <link href="https://zhaochaolan.github.io/qian-duan-ji-chu-zhi-bom/">
+        </link>
+        <updated>2021-09-14T02:58:22.000Z</updated>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://zhaochaolan.github.io/post-images/1631588560367.jpg" alt="" loading="lazy"></figure>
+<p><strong>window对象：</strong><br>
+1，window.screen对象：包含用户屏幕信息<br>
+2，window.location对象：用户获得当前页面的地址<br>
+3，window.history对象<br>
+4，window.navigator<br>
+5，JavaScript消息框：alert()<br>
+6，JavaScript计时：setTimeout()</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://zhaochaolan.github.io/hello-gridea/</id>
