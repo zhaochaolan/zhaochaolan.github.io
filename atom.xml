@@ -2,14 +2,327 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zhaochaolan.github.io</id>
     <title>Eden的博客</title>
-    <updated>2021-12-13T03:01:40.743Z</updated>
+    <updated>2022-07-04T02:53:31.478Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zhaochaolan.github.io"/>
     <link rel="self" href="https://zhaochaolan.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://zhaochaolan.github.io/images/avatar.png</logo>
     <icon>https://zhaochaolan.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, Eden的博客</rights>
+    <rights>All rights reserved 2022, Eden的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[自定义虚线]]></title>
+        <id>https://zhaochaolan.github.io/zi-ding-yi-xu-xian/</id>
+        <link href="https://zhaochaolan.github.io/zi-ding-yi-xu-xian/">
+        </link>
+        <updated>2022-03-28T03:55:17.000Z</updated>
+        <content type="html"><![CDATA[<p>.border-dashed {<br>
+padding: 10px;<br>
+border: 1px dashed deepskyblue;<br>
+border-image: repeating-linear-gradient(135deg, deepskyblue, deepskyblue 5px, transparent 5px, transparent 10px) 1;<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[无依赖绝对定位”应用]]></title>
+        <id>https://zhaochaolan.github.io/wu-yi-lai-jue-dui-ding-wei-ying-yong/</id>
+        <link href="https://zhaochaolan.github.io/wu-yi-lai-jue-dui-ding-wei-ying-yong/">
+        </link>
+        <updated>2021-12-17T10:07:53.000Z</updated>
+        <content type="html"><![CDATA[<p>把这种没有设置left/top/right/bottom属性值的绝对定位称为“无依赖绝对定位”。</p>
+<p>1，各类图标定位<br>
+`<div class="nav"><br>
+<h4 class="nav-list"><br>
+<a href class="nav-a">普通导航</a><br>
+</h4><br>
+<h4 class="nav-list"><br>
+<a href class="nav-a"><br>
+热门导航<i class="icon-hot"></i><br>
+</a><br>
+</h4><br>
+<h4 class="nav-list"><br>
+<a href class="nav-a"><br>
+新导航<i class="icon-new"></i><br>
+</a><br>
+</h4></p>
+</div>`
+.nav {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 600px;
+    margin: 1em auto; 
+    background-color: #333;
+    text-align: center;
+}
+.nav-list { 
+    display: table-cell;
+    font-weight: 400;
+}
+.nav-a { 
+    display: block; 
+    line-height: 20px; 
+    padding: 20px; 
+    color: #bbb; 
+    text-decoration: none; 
+}
+.nav-a:hover { 
+    color: #fff; 
+}
+<p>.icon-hot {<br>
+position: absolute;<br>
+width: 28px; height: 11px;<br>
+margin: -6px 0 0 2px;<br>
+background: url(hot.gif);<br>
+}<br>
+.icon-new {<br>
+position: absolute;<br>
+width: 12px; height: 13px;<br>
+margin: -6px 0 0 2px;<br>
+background: url(new.png) no-repeat center;<br>
+}</p>
+<p>2，超越常规布局的排版（案例：表单应用布局）<br>
+`<div class="regist-box"><br>
+<div class="regist-group"><br>
+<label class="regist-label"><span class="regist-star"><em></span>邮箱</label><br>
+<div class="regist-cell"><br>
+<input type="email" class="regist-input"><span class="regist-remark regist-warn"><br>
+<i class="icon-warn"></i>邮箱格式不准确（示意）<br>
+</span><br>
+</div><br>
+</div><br>
+<div class="regist-group"><br>
+<label class="regist-label"><span class="regist-star"></em></span>密码</label><br>
+<div class="regist-cell"><br>
+<input type="password" class="regist-input"><span class="regist-remark"><br>
+请输入6-16位密码，不能使用空格<br>
+</span><br>
+</div><br>
+</div><br>
+<div class="regist-group"><br>
+<label class="regist-label">手机号码</label><br>
+<div class="regist-cell"><br>
+<input type="tel" class="regist-input"><br>
+</div><br>
+</div><br>
+<div class="regist-group"><br>
+<i class="regist-label"></i><br>
+<div class="regist-cell"><br>
+<a href="javascript:" class="regist-btn">立即注册</a><br>
+</div><br>
+</div></p>
+</div>`
+<p>/* 容器宽度仅300多像素 <em>/<br>
+.regist-box {<br>
+width: 356px;<br>
+margin-left: auto; margin-right: auto;<br>
+}<br>
+/</em> 邮箱报错那里的警示小图标 <em>/<br>
+.regist-warn {<br>
+padding-left: 16px;<br>
+color: #be0000;<br>
+}<br>
+.icon-warn {<br>
+position: absolute;<br>
+margin-left: -18px;<br>
+width: 16px; height: 20px;<br>
+background: url(/images/6/warn.gif) no-repeat center;<br>
+}<br>
+/</em> 定位在盒子外部的红色星号 <em>/<br>
+.regist-star {<br>
+position: absolute;<br>
+margin-left: -1em;<br>
+font-family: simsun;<br>
+color: #f30;<br>
+}<br>
+/</em> 超出容器尺寸的提示信息 */<br>
+.regist-remark {<br>
+position: absolute;<br>
+margin: 10px 0 0 10px;<br>
+color: #666;<br>
+}</p>
+<p>3，下拉列表的定位<br>
+`<div class="search-box"><br>
+<input class="search-input" placeholder="搜索"><a href="javascript:" class="search-btn">搜索</a><br>
+<div class="search-result"><br>
+<div class="search-datalist"><br>
+<a href>搜索结果1</a><br>
+<a href>搜索结果2</a><br>
+<a href>搜索结果3</a><br>
+<a href>搜索结果4</a><br>
+<a href>搜索结果5</a><br>
+</div><br>
+</div></p>
+</div>`
+<p>.search-input {<br>
+width: 200px; height: 20px;<br>
+line-height: 20px;<br>
+padding: 9px 39px 9px 9px;<br>
+border: 1px solid #ddd;<br>
+}<br>
+/* 搜索按钮的无依赖绝对定位 <em>/<br>
+.search-btn {<br>
+width: 20px; height: 20px;<br>
+border: 9px solid #fff;<br>
+background: #ddd url(search.png) no-repeat center;<br>
+position: absolute; margin: 1px 0 0 -40px;<br>
+}<br>
+/</em> 下拉列表的无依赖绝对定位 */<br>
+.search-datalist {<br>
+position: absolute;<br>
+width: 248px;<br>
+border: 1px solid #e6e8e9;<br>
+background-color: #fff;<br>
+}</p>
+<p>/* 搜索列表的显隐控制 */<br>
+.search-result {<br>
+display: none;<br>
+}<br>
+.search-input:focus ~ .search-result {<br>
+display: block;<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[vertical-align属性实践，使用纯CSS实现大小不固定的弹框永远居中的效果]]></title>
+        <id>https://zhaochaolan.github.io/vertical-align-shu-xing-shi-jian-shi-yong-chun-css-shi-xian-da-xiao-bu-gu-ding-de-dan-kuang-yong-yuan-ju-zhong-de-xiao-guo/</id>
+        <link href="https://zhaochaolan.github.io/vertical-align-shu-xing-shi-jian-shi-yong-chun-css-shi-xian-da-xiao-bu-gu-ding-de-dan-kuang-yong-yuan-ju-zhong-de-xiao-guo/">
+        </link>
+        <updated>2021-12-15T08:59:27.000Z</updated>
+        <content type="html"><![CDATA[<p>`<div class="container"><br>
+<div class="dialog"><br>
+<div class="content">内容占位</div><br>
+</div></p>
+</div>`
+.container {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    /* for IE8 */
+    background: url(data:image/png;base64,iVB...g==);
+    /* for IE9+ */
+    background: rgba(0,0,0,.5), none;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 99;
+}
+.container:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.dialog {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 6px;
+    background-color: #fff;
+    text-align: left;
+    white-space: normal;
+}]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[绘制一个带有加号的框框按钮]]></title>
+        <id>https://zhaochaolan.github.io/hui-zhi-yi-ge-dai-you-jia-hao-de-kuang-kuang-an-niu/</id>
+        <link href="https://zhaochaolan.github.io/hui-zhi-yi-ge-dai-you-jia-hao-de-kuang-kuang-an-niu/">
+        </link>
+        <updated>2021-12-14T08:36:35.000Z</updated>
+        <content type="html"><![CDATA[<p><code>&lt;a href class=&quot;add&quot; title=&quot;继续上传&quot;&gt; 添加图片 &lt;/a&gt;</code><br>
+.add {<br>
+display: inline-block;<br>
+width: 76px; height: 76px;<br>
+color: #ccc;<br>
+border: 2px dashed;<br>
+text-indent: -12em;<br>
+transition: color .25s;<br>
+position: relative;<br>
+overflow: hidden;<br>
+}<br>
+.add:hover {<br>
+color: #34538b;<br>
+}<br>
+.add::before, .add::after {<br>
+content: '';<br>
+position: absolute;<br>
+top: 50%;<br>
+left: 50%;<br>
+}<br>
+.add::before {<br>
+width: 20px;<br>
+border-top: 4px solid;<br>
+margin: -2px 0 0 -10px;<br>
+}<br>
+.add::after {<br>
+height: 20px;<br>
+border-left: 4px solid;<br>
+margin: -10px 0 0 -2px;<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[padding属性和background-clip属性配合，可以在有限的标签下实现一些CSS图形绘制效果]]></title>
+        <id>https://zhaochaolan.github.io/padding-shu-xing-he-background-clip-shu-xing-pei-he-ke-yi-zai-you-xian-de-biao-qian-xia-shi-xian-yi-xie-css-tu-xing-hui-zhi-xiao-guo/</id>
+        <link href="https://zhaochaolan.github.io/padding-shu-xing-he-background-clip-shu-xing-pei-he-ke-yi-zai-you-xian-de-biao-qian-xia-shi-xian-yi-xie-css-tu-xing-hui-zhi-xiao-guo/">
+        </link>
+        <updated>2021-12-14T02:54:45.000Z</updated>
+        <content type="html"><![CDATA[<p>例1：不使用伪元素，仅一层标签实现大队长的“三道杠”分类图标效果。此效果在移动端比较常见。<br>
+<code>&lt;i class=&quot;icon-menu&quot;&gt;&lt;/i&gt;</code><br>
+.icon-menu {<br>
+display: inline-block;<br>
+width: 140px; height: 10px;<br>
+padding: 35px 0;<br>
+border-top: 10px solid;<br>
+border-bottom: 10px solid;<br>
+background-color: currentColor;<br>
+background-clip: content-box;<br>
+}</p>
+<p>例2：不使用伪元素，仅一层标签实现双层圆点效果。此效果在移动端也比较常见。<br>
+<code>&lt;i class=&quot;icon-dot&quot;&gt;&lt;/i&gt;</code><br>
+.icon-dot {<br>
+display: inline-block;<br>
+width: 100px; height: 100px;<br>
+padding: 10px;<br>
+border: 10px solid;<br>
+border-radius: 50%;<br>
+background-color: currentColor;<br>
+background-clip: content-box;<br>
+}</p>
+<p>background-clip使用说明：<br>
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[content辅助实现“两端对齐”以及“垂直居中/上边缘/下边缘对齐”效果]]></title>
+        <id>https://zhaochaolan.github.io/content-fu-zhu-shi-xian-liang-duan-dui-qi-yi-ji-chui-zhi-ju-zhong-shang-bian-yuan-xia-bian-yuan-dui-qi-xiao-guo/</id>
+        <link href="https://zhaochaolan.github.io/content-fu-zhu-shi-xian-liang-duan-dui-qi-yi-ji-chui-zhi-ju-zhong-shang-bian-yuan-xia-bian-yuan-dui-qi-xiao-guo/">
+        </link>
+        <updated>2021-12-13T07:28:56.000Z</updated>
+        <content type="html"><![CDATA[<p>`<div id="box" class="box"><i class="bar"></i><br>
+<i class="bar"></i><br>
+<i class="bar"></i><br>
+<i class="bar"></i></p>
+</div>
+<p><button id="button">再增加一条数据</button></p>`
+.box {
+    width: 256px;
+    height: 256px;
+    border-bottom: 1px dashed #ccc;
+    text-align: justify;
+}
+.box:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+}
+.box:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+.bar {
+    display: inline-block;
+    width: 20px; height: 0;
+}]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[css创建水滴形状图形]]></title>
         <id>https://zhaochaolan.github.io/css-chuang-jian-shui-di-xing-zhuang-tu-xing/</id>

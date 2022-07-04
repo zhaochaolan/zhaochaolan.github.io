@@ -1,9 +1,11 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>Eden的博客</title>
+<title>vertical-align属性实践，使用纯CSS实现大小不固定的弹框永远居中的效果 | Eden的博客</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -75,17 +77,62 @@
 </transition>
 
 
-        <div class="content-container">
+      <div class="content-container">
+        <div class="post-detail">
           
-          <div class="tags-container">
-            
-              <a class="tag" href="https://zhaochaolan.github.io/zwTyqumb6/">Gridea</a>
+          <h2 class="post-title">vertical-align属性实践，使用纯CSS实现大小不固定的弹框永远居中的效果</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-12-15</span>
             
           </div>
-
+          <div class="post-content">
+            <p>`<div class="container"><br>
+<div class="dialog"><br>
+<div class="content">内容占位</div><br>
+</div></p>
+</div>`
+.container {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    /* for IE8 */
+    background: url(data:image/png;base64,iVB...g==);
+    /* for IE9+ */
+    background: rgba(0,0,0,.5), none;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 99;
+}
+.container:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.dialog {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 6px;
+    background-color: #fff;
+    text-align: left;
+    white-space: normal;
+}
+          </div>
         </div>
 
-        <div class="site-footer">
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://zhaochaolan.github.io/hui-zhi-yi-ge-dai-you-jia-hao-de-kuang-kuang-an-niu/">
+              <h3 class="post-title">
+                下一篇：绘制一个带有加号的框框按钮
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
   <div class="slogan">温故而知新</div>
   <div class="social-container">
     
@@ -104,8 +151,8 @@
 </div>
 
 
-      </div>
-      <script type="application/javascript">
+    </div>
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
@@ -121,6 +168,5 @@ var app = new Vue({
 
 
 
-    </div>
   </body>
 </html>

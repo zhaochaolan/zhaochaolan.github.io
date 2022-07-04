@@ -1,9 +1,11 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>Eden的博客</title>
+<title>padding属性和background-clip属性配合，可以在有限的标签下实现一些CSS图形绘制效果 | Eden的博客</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -75,17 +77,57 @@
 </transition>
 
 
-        <div class="content-container">
+      <div class="content-container">
+        <div class="post-detail">
           
-          <div class="tags-container">
-            
-              <a class="tag" href="https://zhaochaolan.github.io/zwTyqumb6/">Gridea</a>
+          <h2 class="post-title">padding属性和background-clip属性配合，可以在有限的标签下实现一些CSS图形绘制效果</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-12-14</span>
             
           </div>
+          <div class="post-content">
+            <p>例1：不使用伪元素，仅一层标签实现大队长的“三道杠”分类图标效果。此效果在移动端比较常见。<br>
+<code>&lt;i class=&quot;icon-menu&quot;&gt;&lt;/i&gt;</code><br>
+.icon-menu {<br>
+display: inline-block;<br>
+width: 140px; height: 10px;<br>
+padding: 35px 0;<br>
+border-top: 10px solid;<br>
+border-bottom: 10px solid;<br>
+background-color: currentColor;<br>
+background-clip: content-box;<br>
+}</p>
+<p>例2：不使用伪元素，仅一层标签实现双层圆点效果。此效果在移动端也比较常见。<br>
+<code>&lt;i class=&quot;icon-dot&quot;&gt;&lt;/i&gt;</code><br>
+.icon-dot {<br>
+display: inline-block;<br>
+width: 100px; height: 100px;<br>
+padding: 10px;<br>
+border: 10px solid;<br>
+border-radius: 50%;<br>
+background-color: currentColor;<br>
+background-clip: content-box;<br>
+}</p>
+<p>background-clip使用说明：<br>
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip</p>
 
+          </div>
         </div>
 
-        <div class="site-footer">
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://zhaochaolan.github.io/content-fu-zhu-shi-xian-liang-duan-dui-qi-yi-ji-chui-zhi-ju-zhong-shang-bian-yuan-xia-bian-yuan-dui-qi-xiao-guo/">
+              <h3 class="post-title">
+                下一篇：content辅助实现“两端对齐”以及“垂直居中/上边缘/下边缘对齐”效果
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
   <div class="slogan">温故而知新</div>
   <div class="social-container">
     
@@ -104,8 +146,8 @@
 </div>
 
 
-      </div>
-      <script type="application/javascript">
+    </div>
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
@@ -121,6 +163,5 @@ var app = new Vue({
 
 
 
-    </div>
   </body>
 </html>

@@ -1,9 +1,11 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>Eden的博客</title>
+<title>content辅助实现“两端对齐”以及“垂直居中/上边缘/下边缘对齐”效果 | Eden的博客</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -75,17 +77,58 @@
 </transition>
 
 
-        <div class="content-container">
+      <div class="content-container">
+        <div class="post-detail">
           
-          <div class="tags-container">
-            
-              <a class="tag" href="https://zhaochaolan.github.io/zwTyqumb6/">Gridea</a>
+          <h2 class="post-title">content辅助实现“两端对齐”以及“垂直居中/上边缘/下边缘对齐”效果</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-12-13</span>
             
           </div>
-
+          <div class="post-content">
+            <p>`<div id="box" class="box"><i class="bar"></i><br>
+<i class="bar"></i><br>
+<i class="bar"></i><br>
+<i class="bar"></i></p>
+</div>
+<p><button id="button">再增加一条数据</button></p>`
+.box {
+    width: 256px;
+    height: 256px;
+    border-bottom: 1px dashed #ccc;
+    text-align: justify;
+}
+.box:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+}
+.box:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+.bar {
+    display: inline-block;
+    width: 20px; height: 0;
+}
+          </div>
         </div>
 
-        <div class="site-footer">
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://zhaochaolan.github.io/css-chuang-jian-shui-di-xing-zhuang-tu-xing/">
+              <h3 class="post-title">
+                下一篇：css创建水滴形状图形
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
   <div class="slogan">温故而知新</div>
   <div class="social-container">
     
@@ -104,8 +147,8 @@
 </div>
 
 
-      </div>
-      <script type="application/javascript">
+    </div>
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
@@ -121,6 +164,5 @@ var app = new Vue({
 
 
 
-    </div>
   </body>
 </html>

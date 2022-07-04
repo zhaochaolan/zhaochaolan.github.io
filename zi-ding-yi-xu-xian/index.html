@@ -1,9 +1,11 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     
 <meta charset="utf-8" >
 
-<title>Eden的博客</title>
+<title>自定义虚线 | Eden的博客</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -75,17 +77,38 @@
 </transition>
 
 
-        <div class="content-container">
+      <div class="content-container">
+        <div class="post-detail">
           
-          <div class="tags-container">
-            
-              <a class="tag" href="https://zhaochaolan.github.io/zwTyqumb6/">Gridea</a>
+          <h2 class="post-title">自定义虚线</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-03-28</span>
             
           </div>
+          <div class="post-content">
+            <p>.border-dashed {<br>
+padding: 10px;<br>
+border: 1px dashed deepskyblue;<br>
+border-image: repeating-linear-gradient(135deg, deepskyblue, deepskyblue 5px, transparent 5px, transparent 10px) 1;<br>
+}</p>
 
+          </div>
         </div>
 
-        <div class="site-footer">
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://zhaochaolan.github.io/wu-yi-lai-jue-dui-ding-wei-ying-yong/">
+              <h3 class="post-title">
+                下一篇：无依赖绝对定位”应用
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
   <div class="slogan">温故而知新</div>
   <div class="social-container">
     
@@ -104,8 +127,8 @@
 </div>
 
 
-      </div>
-      <script type="application/javascript">
+    </div>
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
@@ -121,6 +144,5 @@ var app = new Vue({
 
 
 
-    </div>
   </body>
 </html>
