@@ -5,7 +5,7 @@
     
 <meta charset="utf-8" >
 
-<title>content辅助实现“两端对齐”以及“垂直居中/上边缘/下边缘对齐”效果 | Eden的博客</title>
+<title>css | Eden的博客</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -78,55 +78,48 @@
 
 
       <div class="content-container">
-        <div class="post-detail">
-          
-          <h2 class="post-title">content辅助实现“两端对齐”以及“垂直居中/上边缘/下边缘对齐”效果</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2021-12-13</span>
-            
-          </div>
-          <div class="post-content">
-            <p>`<div id="box" class="box"><i class="bar"></i><br>
-<i class="bar"></i><br>
-<i class="bar"></i><br>
-<i class="bar"></i></p>
-</div>
-<p><button id="button">再增加一条数据</button></p>`
-.box {
-    width: 256px;
-    height: 256px;
-    border-bottom: 1px dashed #ccc;
-    text-align: justify;
-}
-.box:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-}
-.box:after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-}
-.bar {
-    display: inline-block;
-    width: 20px; height: 0;
-}
-          </div>
+
+        <div class="current-tag-container">
+          <h2 class="title">
+            <i class="icon icon-pricetags-outline"></i> css
+          </h2> 
         </div>
 
         
-          <div class="next-post">
-            <a class="purple-link" href="https://zhaochaolan.github.io/css-chuang-jian-shui-di-xing-zhuang-tu-xing/">
-              <h3 class="post-title">
-                下一篇：css创建水滴形状图形
-              </h3>
-            </a>
-          </div>
-          
+<section class="post-item">
+    <div class="content">
+      <a href="https://zhaochaolan.github.io/zi-ding-yi-xu-xian/">
+        <h2 class="post-title">自定义虚线</h2>
+      </a>
+      <div class="post-abstract">
+        
       </div>
+      <div class="post-info">
+        <span><i class="icon icon-calendar-outline"></i> 2022-03-28</span>
+        
+          <span>
+            <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="https://zhaochaolan.github.io/lM-for5GR/">
+                css
+                
+              </a>
+            
+          </span>
+        
+      </div>
+    </div>
+    
+  </section>
 
-      
+
+<div class="pagination-container">
+  
+  
+</div>
+
+
+      </div>
 
       <div class="site-footer">
   <div class="slogan">温故而知新</div>
